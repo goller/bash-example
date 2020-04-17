@@ -19,7 +19,7 @@ terraform apply -auto-approve ${NAME}.plan
 cp terraform.tfstate /tmp
 
 echo "+++ :package: endpoint artifact"
-cat terraform.tfstate |jq  '{endpoint: .outputs.cluster_endpoint.value}'
+cat terraform.tfstate |jq  '{endpoint: .outputs.cluster_endpoint.value}' > endpoint.json
 buildkite-agent artifact upload endpoint.json
 
 echo "+++ :package: kubeconfig artifact"
