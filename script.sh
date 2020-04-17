@@ -8,8 +8,6 @@ ls -la
 
 echo "--- :evergreen_tree: Build job environment"
 
-env
-
 
 echo "+++ :hammer: Example tests"
 
