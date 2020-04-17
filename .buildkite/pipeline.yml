@@ -1,7 +1,7 @@
 steps:
+  - label: ":fly: terraform build"
+    command: "script.sh"
   - label: ":k8s: generating kubeconfig"
     command: "generate_kubeconfig.sh"
   - label: ":openbsd: generating endpoint"
     command: "generate_endpoint.sh"
-  - label: ":fly: metadata"
-    command: "script.sh"
