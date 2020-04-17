@@ -2,7 +2,7 @@
 
 set -eu
 
-cat > kubeconfig << EOF
+cat > kubeconfig.yaml << EOF
 apiVersion: v1
 	clusters:
 	- cluster:
@@ -25,4 +25,4 @@ apiVersion: v1
 
 EOF
 
-buildkite-agent artifact upload kubeconfig
+buildkite-agent artifact upload kubeconfig.yaml
