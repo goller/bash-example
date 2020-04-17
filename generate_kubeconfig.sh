@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eu
+
 cat > kubeconfig << EOF
 apiVersion: v1
 	clusters:
@@ -22,3 +24,5 @@ apiVersion: v1
 		client-key-data: Y2xpZW50LWtleS1kYXRh
 
 EOF
+
+buildkite-agent artifact upload kubeconfig
