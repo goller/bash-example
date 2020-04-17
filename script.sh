@@ -12,4 +12,4 @@ echo "+++ :package: terraform"
 terraform init
 terraform plan -var="region=${REGION}" -out=${NAME}.plan
 terraform apply ${NAME}.plan
-cp terraform.state /tmp
+cp terraform.tfstate /tmp
