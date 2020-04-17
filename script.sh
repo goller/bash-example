@@ -9,6 +9,7 @@ buildkite-agent meta-data get cidrs
 
 echo "+++ :package: terraform"
 
+terraform init
 terraform plan -var="region=${REGION}" -out=${NAME}.plan
 terraform apply ${NAME}.plan
 cp terraform.state /tmp
